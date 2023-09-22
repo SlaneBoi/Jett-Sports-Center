@@ -1,0 +1,167 @@
+-- JettSportsCenter's Query of INSERT TO Data into Tables
+INSERT INTO Staff
+VALUES 
+('ST001', 'Padma', 'Male', 1200000),
+('ST002', 'Fricksevan', 'Male', 1400000),
+('ST003', 'Joseph', 'Male', 1600000),
+('ST004', 'Yongky', 'Male', 1800000),
+('ST005', 'Patricia', 'Female', 5150000),
+('ST006', 'Elias', 'Male', 1350000),
+('ST007', 'Leonard', 'Male', 1750000),
+('ST008', 'Potter', 'Female', 7685000),
+('ST009', 'Michelle', 'Female', 1990000),
+('ST010', 'Laureen', 'Female', 2150000),
+('ST011', 'Priscilla', 'Female', 6350000),
+('ST012', 'Sergio', 'Male', 1865000),
+('ST013', 'Ralph', 'Male', 1550000),
+('ST014', 'Joshua', 'Male', 1050000),
+('ST015', 'Tyler', 'Male', 2250000);
+
+INSERT INTO Customer
+VALUES
+('CU001', 'Dirk', '50', '0217662887'),
+('CU002', 'Dukey', '24', '0243580719'),
+('CU003', 'Alex', '20', '0216692360'),
+('CU004', 'Cherice', '15', '0215252082'),
+('CU005', 'Carlin', '18', '0274589979'),
+('CU006', 'McCutcheon', '30', '0218300550'),
+('CU007', 'Silvain', '34', '0224238119'),
+('CU008', 'Javier', '27', '0217355182'),
+('CU009', 'Wilbur', '10', '0216395106'),
+('CU010', 'Sadie', '26', '0224214262'),
+('CU011', 'Sofie', '35', '0248449934'),
+('CU012', 'Amy', '41', '0218307577'),
+('CU013', 'Gabriela', '22', '0274580863'),
+('CU014', 'Westley', '39', '0217811834'),
+('CU015', 'Hadleigh', '25', '0217233835');
+
+INSERT INTO Product 
+VALUES
+('PR001', 'Basketball Ball', 100000),
+('PR002', 'Soccer Ball', 95000),
+('PR003', 'Badminton Racket Type I', 50000),
+('PR004', 'Badminton Racket Type II', 100000),
+('PR005', 'Badminton Racket Type III', 150000),
+('PR006', 'Badminton Racket Type IV', 200000),
+('PR007', 'Tennis Racket Type I', 100000),
+('PR008', 'Tennis Racket Type II', 200000),
+('PR009', 'Tennis Ball', 50000),
+('PR010', 'Nike Soccer Boots', 200000),
+('PR011', 'Adidas Soccer Boots', 210000),
+('PR012', 'Soccer Jersey (Replica)', 140000),
+('PR013', 'Soccer Jersey (Player Issue)', 240000),
+('PR014', 'Sports Headband', 20000),
+('PR015', 'Hand Air Pump', 45000),
+('PR016','Signed Basketball Jersey',300000)
+
+INSERT INTO SportsField
+VALUES
+('SF001', 'Alpha Basketball Field', 'Alpha I Street', 25000),
+('SF002', 'Beta Basketball Field', 'Beta I Street', 25000),
+('SF003', 'Charlie Basketball Field', 'Charlie I Street', 35000),
+('SF004', 'Delta Basketball Field', 'Delta I Street', 35000),
+('SF005', 'Alpha Soccer Field', 'Alpha II Street', 30000),
+('SF006', 'Beta Soccer Field', 'Beta II Street', 30000),
+('SF007', 'Charlie Soccer Field', 'Charlie II Street', 45000),
+('SF008', 'Delta Soccer Field', 'Delta II Street', 40000),
+('SF009', 'Alpha Tennis Field', 'Alpha III Street', 20000),
+('SF010', 'Beta Tennis Field', 'Beta III Street', 20000),
+('SF011', 'Charlie Tennis Field', 'Charlie III Street', 23000),
+('SF012', 'Bravo Basketball Field', 'Beta V Street', 50000),
+('SF013', 'Alpha Badminton Field', 'Alpha IV Street', 15000),
+('SF014', 'Beta Badminton Field', 'Beta IV Street', 15000),
+('SF015', 'Charlie Badminton Field', 'Charlie IV Street', 18000), 
+('SF016', 'Papa Basketball Field', 'Papa I Street', 65000),
+('SF017', 'Zebra Basketball Field', 'Zebra I Street', 75000)
+
+INSERT INTO ProductTransactionHeader (ProductTransactionID,ProductTransactionDate, StaffID, CustomerID) 
+VALUES 
+('PT001','2022-01-03', 'ST004', 'CU003'),
+('PT002', '2022-01-04', 'ST001', 'CU005'),
+('PT003', '2022-01-10', 'ST003', 'CU006'),
+('PT004', '2022-01-25', 'ST015', 'CU010'),
+('PT005', '2022-02-02', 'ST012', 'CU001'),
+('PT006', '2022-02-10', 'ST005', 'CU002'),
+('PT007', '2022-02-18', 'ST011', 'CU004'),
+('PT008', '2022-02-21', 'ST013', 'CU007'),
+('PT009', '2022-03-01', 'ST001', 'CU008'),
+('PT010', '2022-03-07', 'ST003', 'CU012'),
+('PT011', '2022-03-09', 'ST007', 'CU013'),
+('PT012', '2022-03-15', 'ST008', 'CU009'),
+('PT013', '2022-04-05', 'ST015', 'CU015'),
+('PT014', '2022-05-06', 'ST012', 'CU011'),
+('PT015', '2022-04-25', 'ST005', 'CU014');
+
+INSERT INTO ProductTransactionDetail(ProductTransactionID,ProductID, ProductQuantity) 
+VALUES 
+('PT001','PR001', 5),
+('PT001','PR011', 10),
+('PT002','PR003', 2),
+('PT003','PR011', 1),
+('PT003','PR013', 5),
+('PT003','PR002', 1),
+('PT004','PR004', 1),
+('PT004','PR014', 5),
+('PT005','PR015', 3),
+('PT006','PR010', 1),
+('PT006','PR013', 2),
+('PT007','PR012', 5),
+('PT008','PR006', 1),
+('PT008','PR002', 2),
+('PT009','PR011', 1),
+('PT010','PR005', 2),
+('PT010','PR014', 4),
+('PT011','PR012', 5),
+('PT012','PR013', 2),
+('PT012','PR003', 5),
+('PT013','PR008', 2),
+('PT013','PR009', 5),
+('PT014','PR007', 1),
+('PT015','PR014', 2),
+('PT015','PR003', 5)
+
+INSERT INTO [RentalTransactionHeader]
+VALUES
+('RT001', '2022-01-01', 'ST001', 'CU002'),
+('RT002', '2022-01-10', 'ST002', 'CU003'),
+('RT003', '2022-01-15', 'ST003', 'CU004'),
+('RT004', '2022-01-20', 'ST004', 'CU005'),
+('RT005', '2022-01-25', 'ST005', 'CU006'),
+('RT006', '2022-01-30', 'ST006', 'CU007'),
+('RT007', '2022-02-01', 'ST010', 'CU008'),
+('RT008', '2022-02-05', 'ST009', 'CU009'),
+('RT009', '2022-02-10', 'ST013', 'CU011'),
+('RT010', '2022-02-15', 'ST008', 'CU010'),
+('RT011', '2022-02-20', 'ST007', 'CU001'),
+('RT012', '2022-02-25', 'ST011', 'CU014'),
+('RT013', '2022-02-28', 'ST014', 'CU012'),
+('RT014', '2022-03-01', 'ST012', 'CU015'),
+('RT015', '2022-03-05', 'ST015', 'CU013')
+
+INSERT INTO [RentalTransactionDetail] 
+VALUES
+('RT001', 'SF001', 2),
+('RT002', 'SF002', 4),
+('RT003', 'SF004', 8),
+('RT004', 'SF003', 3),
+('RT005', 'SF005', 6),
+('RT006', 'SF006', 7),
+('RT007', 'SF008', 5),
+('RT008', 'SF007', 11),
+('RT009', 'SF010', 15),
+('RT010', 'SF009', 4),
+('RT011', 'SF011', 8),
+('RT012', 'SF013', 9),
+('RT013', 'SF012', 10),
+('RT014', 'SF015', 4),
+('RT015', 'SF014', 5),
+('RT014', 'SF011', 8),
+('RT013', 'SF009', 3),
+('RT012', 'SF005', 10),
+('RT011', 'SF007', 18),
+('RT010', 'SF013', 2),
+('RT008', 'SF011', 8),
+('RT005', 'SF003', 9),
+('RT007', 'SF001', 5),
+('RT005', 'SF004', 7),
+('RT005', 'SF006', 13)
